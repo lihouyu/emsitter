@@ -55,7 +55,8 @@ while True:
     ### Read miner output
     for miner_out in miner_proc.stdout:
         ### Only match speed output, ignoring all other output lines
-        miner_out_re = re.match(r"^m\s+\d\d:\d\d:\d\d\|[^\s]+\s+\|\s+(Speed\s+([^\s]+)\s+Mh\/s).+", miner_out.decode("utf-8").strip(), re.M|re.I)
+        miner_out_re = re.match(r"^m\s+\d\d:\d\d:\d\d\|[^\s]+\s+\|\s+(Speed\s+([^\s]+)\s+Mh\/s).+", 
+            miner_out.decode("utf-8").strip(), re.M|re.I)
         ### Get the current local time
         str_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         ### If we find a output line with speed
