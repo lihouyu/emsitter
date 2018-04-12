@@ -1,6 +1,7 @@
 # etherminer.exe wrapper
 # restart when speed drop down
 # restart when exit unexpectedly
+#       on Windows, need to disable dialog of Windows Error Reporting
 #
 # HouYu Li <lihouyu@phpex.net>
 #
